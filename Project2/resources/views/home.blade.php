@@ -6,16 +6,16 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
+                <form action="{{route('sendMail')}}" method="POST">
+                    @csrf
+                    @method('POST')
+                    <label for="mail-form">Messaggio mail</label>
+                    <input name="mail-form" type="text">
+                    <br>
+                    <br>
+                    <input type="submit" value="INVIA">
+                    <br>
+               </form>
             </div>
         </div>
     </div>

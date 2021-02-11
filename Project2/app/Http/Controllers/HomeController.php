@@ -25,14 +25,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    public function send(Request $request)
+        {
+           Mail::to(Auth::user())->send(new TestMail('mail-form'));
+           return redirect() -> back();
+ 
+        }
+
     public function index()
-    {
-        // Mail utente collegato
-        $mail = Auth::user()-> email;
-        // dd($mail);
+        {
+            // Mail utente collegato
+            $mail = Auth::user()-> email;
+            // dd($mail);
 
-        Mail::to($mail)->send(new TestMail($mail));
+            Mail::to($mail)->send(new TestMail($mail));
 
-        return view('home');
-    }
+            return view('home');
+        }
 }
