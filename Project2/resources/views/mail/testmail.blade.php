@@ -108,7 +108,9 @@ a[x-apple-data-detectors] {
                      <tr> 
 
                          {{-- Personalizzazione del modello con il nome utente --}}
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px"><h1 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:30px;font-style:normal;font-weight:bold;color:#212121">Benvenuta {{ Auth::user()-> name }} nel modello demo di Stripo!</h1></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px"><h1 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:30px;font-style:normal;font-weight:bold;color:#212121">Benvenuta {{ Auth::user()-> name }} nel modello demo di Stripo!</h1>
+                        <h3>{{ $mailForm }}</h3>
+                      </td> 
                      </tr> 
                      <tr> 
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#131313">Utilizza gli editor di e-mail Drag-n-Drop e HTML:</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;color:#131313">due costruttori in uno.</p></td> 

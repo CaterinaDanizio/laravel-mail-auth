@@ -16,9 +16,13 @@ class TestMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+
+    public $mailForm;
+
+    public function __construct($mailForm)
     {
-        //
+        
+        $this -> mailForm -> $mailForm;
     }
 
     /**
@@ -28,6 +32,7 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        return $this->from('noreply@laravel.com')->view('mail.TestMail');
+        return $this->from('noreply@laravel.com')
+        ->view('mail.TestMail');
     }
 }

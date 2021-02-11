@@ -9,8 +9,8 @@
                 <form action="{{route('sendMail')}}" method="POST">
                     @csrf
                     @method('POST')
-                    <label for="mail-form">Messaggio mail</label>
-                    <input name="mail-form" type="text">
+                    <label for="mailForm">Messaggio mail</label>
+                    <input name="mailForm" type="text">
                     <br>
                     <br>
                     <input type="submit" value="INVIA">
